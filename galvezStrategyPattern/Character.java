@@ -1,16 +1,18 @@
 package galvezStrategyPattern;
 
 public class Character {
-    private String characterType;
-    private Attack attack;
-    private Defend defend;
+    private CharacterType characterType;
     
-    public Character (String characterType){
-        this.orderAmount = orderAmount;
-        this.paymentType = paymentType;
+    public Character (CharacterType characterType){
+        this.characterType = characterType;
     }
 
-    public String calculatePayment(){
-        return "Your order amount is " + orderAmount + "\n" + paymentType.calculatePayment();
+    public void attack (){
+        characterType.attack();
     }
+
+    public void defend(){
+        characterType.defend();
+    }
+
 }
